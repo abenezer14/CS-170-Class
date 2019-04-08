@@ -65,25 +65,25 @@ public class LinkedListInnerNode {
         return deleted;
     }
 
-    public void makeCopy(LinkedListInnerNode original) {
-        Node ptr= original.head;
-        while(ptr!= null){
-            this.insert(ptr.data);
-            ptr=ptr.next;
-        }
-    }
-
-//    public static LinkedListInnerNode makeCopy(LinkedListInnerNode original) {
-//        LinkedListInnerNode newList =  new LinkedListInnerNode();
-//
+//    public void makeCopy(LinkedListInnerNode original) {
 //        Node ptr= original.head;
 //        while(ptr!= null){
-//            newList.insert(ptr.data);
+//            this.insert(ptr.data);
 //            ptr=ptr.next;
 //        }
-//
-//        return newList;
 //    }
+
+    public static LinkedListInnerNode makeCopy(LinkedListInnerNode original) {
+        LinkedListInnerNode newList =  new LinkedListInnerNode();
+
+        Node ptr= original.head;
+        while(ptr!= null){
+            newList.insert(ptr.data);
+            ptr=ptr.next;
+        }
+
+        return newList;
+    }
 
     public void calcArea(LinkedListInnerNode otherlist) {
         Node ptr = otherlist.head;
